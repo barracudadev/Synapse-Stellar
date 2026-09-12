@@ -1,7 +1,7 @@
 /**
  * vitest.config.ts
  *
- * Vitest configuration for Nodal AI.
+ * Vitest configuration for Vela.
  *
  * ## Key Configuration Details:
  *

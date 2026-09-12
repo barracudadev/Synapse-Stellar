@@ -72,7 +72,7 @@ export async function dispatchWebhook(
   const headers: Record<string, string> = { 'Content-Type': 'application/json' };
 
   if (config.WEBHOOK_SECRET) {
-    headers['X-Nodal-Signature'] = signPayload(body, config.WEBHOOK_SECRET);
+    headers['X-Vela-Signature'] = signPayload(body, config.WEBHOOK_SECRET);
   }
 
   let lastError: unknown;

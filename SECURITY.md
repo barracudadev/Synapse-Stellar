@@ -29,7 +29,7 @@ High and Critical findings are not accepted as routine CI noise. If remediation 
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Use [GitHub Private Security Advisories](https://github.com/Nodal-stellar/Nodal-AI/security/advisories/new) to report vulnerabilities confidentially. This keeps details private until a fix is released.
+Use [GitHub Private Security Advisories](https://github.com/barracudadev/Synapse-Stellar/security/advisories/new) or contact **skillxplorer@gmail.com** to report vulnerabilities confidentially. This keeps details private until a fix is released.
 
 ### Response SLA
 
@@ -252,11 +252,11 @@ console.log('✅ Old signer removed:', txResult.id);
 
 ## Known Limitations
 
-Users should be aware of the following limitations when deploying Nodal AI:
+Users should be aware of the following limitations when deploying Vela:
 
 ### 1. In-Memory Nonce Store
 
-The x402 nonce store is in-memory and not persisted to disk. If the agent process restarts, previously-seen nonces are cleared. This creates a window where replayed x402 challenges could be accepted until the agent is re-initialized with fresh state. See [#207](https://github.com/Nodal-stellar/Nodal-AI/issues/207) for persistent nonce store implementation.
+The x402 nonce store is in-memory and not persisted to disk. If the agent process restarts, previously-seen nonces are cleared. This creates a window where replayed x402 challenges could be accepted until the agent is re-initialized with fresh state. See [#207](https://github.com/barracudadev/Synapse-Stellar/issues/207) for persistent nonce store implementation.
 
 ### 2. Soroban Simulation Disabled for Payment Estimates
 
@@ -264,7 +264,7 @@ The x402 nonce store is in-memory and not persisted to disk. If the agent proces
 
 ### 3. AWS Secret Fetch Pattern
 
-`config.ts` uses `execSync` to fetch `AGENT_SECRET_KEY` from AWS Secrets Manager. This pattern has inherent security risks including exposing command output in error logs and blocking the event loop during secret retrieval. See [#210](https://github.com/Nodal-stellar/Nodal-AI/issues/210) for a planned non-blocking alternative.
+`config.ts` uses `execSync` to fetch `AGENT_SECRET_KEY` from AWS Secrets Manager. This pattern has inherent security risks including exposing command output in error logs and blocking the event loop during secret retrieval. See [#210](https://github.com/barracudadev/Synapse-Stellar/issues/210) for a planned non-blocking alternative.
 
 ### 4. Webhook Delivery Retry Limits
 
